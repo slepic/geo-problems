@@ -37,7 +37,7 @@ class Position implements PositionInterface
 	 */
 	public static function fromDegrees(float $latitude, float $longitude): PositionInterface
 	{
-		return new self(deg2rad($latitude), deg2rad($longitude));
+		return new self($latitude * M_PI / 180.0, $longitude * M_PI / 180.0);
 	}
 
 	/**

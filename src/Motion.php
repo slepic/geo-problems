@@ -37,7 +37,7 @@ class Motion implements MotionInterface
 	 */
 	public static function fromDegrees(float $distance, float $angle): MotionInterface
 	{
-		return new self($distance, deg2rad($angle));
+		return new self($distance, $angle * M_PI / 180.0);
 	}
 
 	/**
