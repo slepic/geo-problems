@@ -8,7 +8,7 @@ $rad2deg = 180.0 / M_PI;
 $deg2rad = M_PI / 180.0;
 
 echo "Direct problem:\n";
-echo "Comparing TeamA vs. Slepic implementation with $max \random samples.\n";
+echo "Comparing TeamA vs. Slepic implementation with $max random samples.\n";
 
 $start = \microtime(true);
 for ($i = 0; $i < $max; ++$i) {
@@ -46,7 +46,7 @@ echo "TeamA is " . \round($teamDelta / $slepicDelta * 100 - 100, 2) . "% slower 
 
 echo \PHP_EOL;
 echo "Inverse problem:\n";
-echo "Comparing TeamA vs. Slepic implementation with $max \random samples.\n";
+echo "Comparing TeamA vs. Slepic implementation with $max random samples.\n";
 
 $start = \microtime(true);
 for ($i = 0; $i < $max; ++$i) {
