@@ -23,7 +23,7 @@ class Motion implements MotionInterface
 		if ($distance < 0) {
 			throw new \InvalidArgumentException('Distance must be non-negative.');
 		}
-		if ($angle < 0 || $angle >= 2 * M_PI) {
+		if ($angle < 0 || ($angle - 0.000000000000001) >= 2 * M_PI) {
 			throw new \InvalidArgumentException('Angle must be in interval <0, 2*pi).');
 		}
 		$this->distance = $distance;
