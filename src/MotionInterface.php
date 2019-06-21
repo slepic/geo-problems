@@ -12,5 +12,5 @@ interface MotionInterface
 	/**
 	 * @return float Bearing angle in radians
 	 */
-	public function getAngle(): float;
+	public function getAngleInRadians(): float;
 }

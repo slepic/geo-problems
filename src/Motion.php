@@ -31,16 +31,6 @@ class Motion implements MotionInterface
 	}
 
 	/**
-	 * @param float $distance
-	 * @param float $angle
-	 * @return MotionInterface
-	 */
-	public static function fromDegrees(float $distance, float $angle): MotionInterface
-	{
-		return new self($distance, $angle * M_PI / 180.0);
-	}
-
-	/**
 	 * @return float Distance in reference units
 	 */
 	public function getDistance(): float
@@ -51,7 +41,7 @@ class Motion implements MotionInterface
 	/**
 	 * @return float Bearing angle in radians
 	 */
-	public function getAngle(): float
+	public function getAngleInRadians(): float
 	{
 		return $this->angle;
 	}

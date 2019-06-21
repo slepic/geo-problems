@@ -31,19 +31,9 @@ class Position implements PositionInterface
 	}
 
 	/**
-	 * @param float $latitude
-	 * @param float $longitude
-	 * @return PositionInterface
-	 */
-	public static function fromDegrees(float $latitude, float $longitude): PositionInterface
-	{
-		return new self($latitude * M_PI / 180.0, $longitude * M_PI / 180.0);
-	}
-
-	/**
 	 * @return float Latitude in radians
 	 */
-	public function getLatitude(): float
+	public function getLatitudeInRadians(): float
 	{
 		return $this->latitude;
 	}
@@ -51,7 +41,7 @@ class Position implements PositionInterface
 	/**
 	 * @return float Longitude in radians
 	 */
-	public function getLongitude(): float
+	public function getLongitudeInRadians(): float
 	{
 		return $this->longitude;
 	}

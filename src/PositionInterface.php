@@ -7,10 +7,10 @@ interface PositionInterface
 	/**
 	 * @return float Latitude in radians
 	 */
-	public function getLatitude(): float;
+	public function getLatitudeInRadians(): float;
 
 	/**
 	 * @return float Longitude in radians
 	 */
-	public function getLongitude(): float;
+	public function getLongitudeInRadians(): float;
 }

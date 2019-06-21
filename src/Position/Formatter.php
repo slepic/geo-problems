@@ -85,12 +85,12 @@ class Formatter implements FormatterInterface
 					if ($latitudeFormat === null) {
 						$latitudeFormat = $ownFormat ?? $longitudeFormat ?? $this->defaultFormat;
 					}
-					return $this->formatLatitude($position->getLatitude(), $ownFormat ?? $latitudeFormat);
+					return $this->formatLatitude($position->getLatitudeInRadians(), $ownFormat ?? $latitudeFormat);
 				} else {
 					if ($longitudeFormat === null) {
 						$longitudeFormat = $ownFormat ?? $latitudeFormat ?? $this->defaultFormat;
 					}
-					return $this->formatLongitude($position->getLongitude(), $ownFormat ?? $longitudeFormat);
+					return $this->formatLongitude($position->getLongitudeInRadians(), $ownFormat ?? $longitudeFormat);
 				}
 			},
 			$format
